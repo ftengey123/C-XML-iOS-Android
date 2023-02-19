@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="alpha.Views.LoginPage"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#efe9f7"  Orientation="Vertical" Padding="0" Spacing="0">
+            <Frame BackgroundColor="#4447b2" HasShadow="False" Padding="0">
+                <StackLayout Orientation="Vertical" Spacing="10" Padding="30">
+                    <BoxView HeightRequest="40"/>
+                    <Label x:Name="messageLabel" Text="AppName" TextColor="White"  
+                    FontAttributes="Bold" BackgroundColor="#4447b2" FontSize="60" HorizontalOptions="Center" />
+                </StackLayout>
+            </Frame>
+            <Frame BackgroundColor="#efe9f7" HasShadow="False" Padding="0">
+                <StackLayout Orientation="Vertical" Spacing="0" Padding="30">
+                    <Entry x:Name="emailEntry" Text="{Binding UserName}" Placeholder="Email"   
+                           PlaceholderColor="Black" HeightRequest="40"   
+                           Keyboard="Email"
+                           BackgroundColor="#"
+                           TextColor="Black"/>
+                    <BoxView HeightRequest="40"/>
+                    <Entry x:Name="passwordEntry" Text="{Binding Password}" Placeholder="Password"   
+                           PlaceholderColor="Black" HeightRequest="40"   
+                           IsPassword="True"  
+                           TextColor="Black"/>
+                    <BoxView HeightRequest="40"/>
+                    <Button Command="{Binding LoginCommand}" Text="Login" TextColor="White"  
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"  
+                    BackgroundColor="#4447b2" />
+                    <Frame BackgroundColor="#efe9f7" HasShadow="False" Padding="0">
+                        <StackLayout Orientation="Vertical" Spacing="-20" Padding="0" >
+                            <Button Command="{Binding SignupCommand}" Text="Sign up" TextColor="#4447b2"  
+                    FontAttributes="None" FontSize="15" HorizontalOptions="Start" Padding="0" BackgroundColor="Transparent"/>
+                            <Button Command="{Binding SignupCommand}" Text="    Forgot Password?" TextColor="#4447b2"  
+                    FontAttributes="Italic" FontSize="15" HorizontalOptions="Start" Padding="0" BackgroundColor="Transparent"/>
+                            <Button Command="{Binding SignupCommand}" Text="Privacy" TextColor="#4447b2"  
+                    FontAttributes="None" FontSize="15" HorizontalOptions="Start" Padding="0" BackgroundColor="Transparent"/>
+                        </StackLayout>
+                    </Frame>
+                    <BoxView HeightRequest="80"/>
+                    <Image VerticalOptions="Center" WidthRequest="150" Source="ATG.png"/>
+                    <Label x:Name="appVersion" Text="version 0.0.1" TextColor="#4447b2"  
+                    FontAttributes="Bold" BackgroundColor="Transparent" FontSize="10" HorizontalOptions="Start" />
+                </StackLayout>
+            </Frame>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

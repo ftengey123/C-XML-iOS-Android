@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="alpha.Views.SignupPage"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#efe9f7"  Orientation="Vertical" Padding="0" Spacing="0">
+            <Frame BackgroundColor="#4447b2" HasShadow="False" Padding="0">
+                <StackLayout Orientation="Vertical" Spacing="10" Padding="30">
+                    <BoxView HeightRequest="40"/>
+                    <Label x:Name="messageLabel" Text="AppName" TextColor="White"  
+                    FontAttributes="Bold" BackgroundColor="#4447b2" FontSize="60" HorizontalOptions="Center" />
+                </StackLayout>
+            </Frame>
+            <Frame BackgroundColor="#efe9f7" HasShadow="False" Padding="0">
+                <StackLayout Orientation="Vertical" Spacing="0" Padding="30">
+                    <Entry x:Name="firstNEntry" Text="{Binding FirstName}" Placeholder="First Name"   
+                           PlaceholderColor="#4447b2" HeightRequest="40"   
+                           Keyboard="Email"
+                           BackgroundColor="#"
+                           TextColor="#4447b2"/>
+                    <Entry x:Name="lastNEntry" Text="{Binding LastName}" Placeholder="Last Name"   
+                           PlaceholderColor="#4447b2" HeightRequest="40"   
+                           Keyboard="Email"
+                           BackgroundColor="#"
+                           TextColor="#4447b2"/>
+                    <Entry x:Name="phoneEntry" Text="{Binding PhoneNumber}" Placeholder="Phone Number"   
+                           PlaceholderColor="#4447b2" HeightRequest="40"   
+                           Keyboard="Email"
+                           BackgroundColor="#"
+                           TextColor="#4447b2"/>
+                    <Entry x:Name="emailEntry" Text="{Binding UserName}" Placeholder="Email"   
+                           PlaceholderColor="#4447b2" HeightRequest="40"   
+                           Keyboard="Email"
+                           BackgroundColor="#"
+                           TextColor="#4447b2"/>
+                    <Entry x:Name="passwordEntry" Text="{Binding Password}" Placeholder="Password"   
+                           PlaceholderColor="#4447b2" HeightRequest="40"   
+                           IsPassword="True"  
+                           TextColor="#4447b2"/>
+                    <Entry x:Name="passwordEntry1" Text="{Binding Password1}" Placeholder="Confirm Password"   
+                           PlaceholderColor="#4447b2" HeightRequest="40"   
+                           IsPassword="True"  
+                           TextColor="#4447b2"/>
+                    <BoxView HeightRequest="20"/>
+                    <Button Command="{Binding CreateAcctCommand}" Text="Create account" TextColor="White"  
+                    FontAttributes="None" FontSize="Large" HorizontalOptions="FillAndExpand"  
+                    BackgroundColor="#4447b2" />
+                    <Frame BackgroundColor="#efe9f7" HasShadow="False" Padding="4">
+                        <StackLayout Orientation="Vertical" Spacing="-20" Padding="0">
+                            <BoxView HeightRequest="5"/>
+                            <Button Command="{Binding LoginCommand}" Text="Sign in" TextColor="#4447b2"  
+                    FontAttributes="None" FontSize="15" HorizontalOptions="Start" Padding="0" BackgroundColor="Transparent"/>
+                            <Button Command="{Binding SignupCommand}" Text="Privacy" TextColor="#4447b2"  
+                    FontAttributes="None" FontSize="15" HorizontalOptions="Start" Padding="0" BackgroundColor="Transparent"/>
+                        </StackLayout>
+                    </Frame>
+                    <BoxView HeightRequest="0"/>
+                    <Image VerticalOptions="Center" WidthRequest="150" Source="ATG.png"/>
+                </StackLayout>
+            </Frame>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
